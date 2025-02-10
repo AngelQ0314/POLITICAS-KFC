@@ -15,7 +15,8 @@
         <input type="text" class="form-control" placeholder="Parámetro" [(ngModel)]="nuevaPolitica.Parametro_Estacion">
       </div>
       <div class="col-md-3">
-        <input type="text" class="form-control" placeholder="Valor Desarrollo" [(ngModel)]="nuevaPolitica.Valor_Desarrollo">
+        <input type="text" class="form-control" placeholder="Valor Desarrollo"
+          [(ngModel)]="nuevaPolitica.Valor_Desarrollo">
       </div>
     </div>
     <div class="mt-3">
@@ -69,25 +70,28 @@
   <h4 class="mt-4">📊 Resultados de Validación</h4>
   <div *ngFor="let politica of politicasValidacion" class="card p-3 mb-3 shadow-sm">
     <p><strong>Estación:</strong> {{ politica.Estacion }}</p>
+    <p><strong>Cajero:</strong>{{politica.Cajero}}</p>
     <p><strong>Colección:</strong> {{ politica.Coleccion_Estacion }}</p>
     <p><strong>Parámetro:</strong> {{ politica.Parametro_Estacion }}</p>
     <p>
-      <strong>Valor en BD:</strong> 
-      <input *ngIf="politica.editando" type="text" class="form-control d-inline w-auto" [(ngModel)]="politica.Varchar_Valor_Estacion_BD">
+      <strong>Valor en BD:</strong>
+      <input *ngIf="politica.editando" type="text" class="form-control d-inline w-auto"
+        [(ngModel)]="politica.Varchar_Valor_Estacion_BD">
       <span *ngIf="!politica.editando">{{ politica.Varchar_Valor_Estacion_BD }}</span>
     </p>
     <p><strong>Valor en Desarrollo:</strong> {{ politica.Varchar_Valor_Estacion_Desarrollo }}</p>
     <p>
       <strong>Validación:</strong>
-      <span [ngClass]="politica.Varchar_Validacion_Coincidencia === '--> NO COINCIDEN <--' ? 'text-danger' : 'text-success'">
+      <span
+        [ngClass]="politica.Varchar_Validacion_Coincidencia === '--> NO COINCIDEN <--' ? 'text-danger' : 'text-success'">
         {{ politica.Varchar_Validacion_Coincidencia }}
       </span>
     </p>
 
     <!--Botón de Corregir -->
     <div class="d-flex justify-content-start gap-2">
-      <button *ngIf="politica.Varchar_Validacion_Coincidencia === '--> NO COINCIDEN <--'" 
-              class="btn btn-outline-danger btn-sm" (click)="activarEdicion(politica)">
+      <button *ngIf="politica.Varchar_Validacion_Coincidencia === '--> NO COINCIDEN <--'"
+        class="btn btn-outline-danger btn-sm" (click)="activarEdicion(politica)">
         🔧 Corregir
       </button>
       <button *ngIf="politica.editando" class="btn btn-outline-success btn-sm" (click)="guardarCorreccion(politica)">
