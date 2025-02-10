@@ -1,0 +1,36 @@
+<div class="container text-center mt-4">
+  <h1 class="mb-4">📜 Políticas</h1>
+
+  <!-- Botón para regresar a Datos de Entrada -->
+  <button (click)="volverAEntrada()" class="btn btn-secondary mb-3">
+    ⬅️ Regresar a Datos de Entrada
+  </button>
+
+  <!-- Botones para cambiar entre categorías -->
+  <div class="d-flex justify-content-center gap-3 mb-4">
+    <button class="btn btn-outline-primary" (click)="cambiarCategoria('cadena')">
+      🔗 Políticas de Cadena
+    </button>
+    <button class="btn btn-outline-success" (click)="cambiarCategoria('restaurante')">
+      🍽️ Políticas de Restaurante
+    </button>
+    <button class="btn btn-outline-warning" (click)="cambiarCategoria('estacion')">
+      🚉 Políticas de Estación
+    </button>
+  </div>
+
+  <!-- Contenido de la categoría seleccionada -->
+  <div class="card p-3 shadow-lg">
+    <div *ngIf="categoriaSeleccionada === 'cadena'">
+      <app-cadena></app-cadena>
+    </div>
+
+    <div *ngIf="categoriaSeleccionada === 'estacion'">
+      <app-estacion></app-estacion>
+    </div>
+
+    <div *ngIf="categoriaSeleccionada === 'restaurante'">
+      <app-restaurante></app-restaurante>
+    </div>
+  </div>
+</div>
