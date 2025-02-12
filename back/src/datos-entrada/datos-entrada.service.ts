@@ -33,7 +33,7 @@ export class DatosEntradaService {
     }
   }
 
-  // Obtener datos de entrada si aún no han expirado
+  // Obtener datos de entrada
   obtenerDatosEntrada(): any {
     const datos = this.leerArchivo();
     if (Object.keys(datos).length === 0) {
@@ -42,7 +42,7 @@ export class DatosEntradaService {
     return datos;
   }
 
-  // Insertar o actualizar datos de entrada
+  // Insertar datos de entrada
   insertarDatos(datos: any): any {
     this.escribirArchivo(datos);
     console.log('Datos guardados correctamente.');

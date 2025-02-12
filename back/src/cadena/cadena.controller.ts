@@ -1,5 +1,4 @@
-import { Controller, Get, Post, Put, Delete, Param, Body, NotFoundException } from '@nestjs/common';
-import { PoliticaCadenaDto } from './dto/cadena.dto';
+import { Controller, Get, Post, Put, Delete, Param, Body } from '@nestjs/common';
 import { CadenaService } from './cadena.service';
 
 @Controller('cadena')

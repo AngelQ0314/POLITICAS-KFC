@@ -70,6 +70,12 @@ export class DatosEntradaComponent implements OnInit {
     }
   }
 
+    //Cancelar edición
+    cancelarEdicion(): void {
+      this.editandoClave = null;
+      this.editandoValor = '';
+    }
+
   // Eliminar un dato
   eliminarDato(clave: string): void {
     this.datosEntradaService.eliminarDato(clave).subscribe(
@@ -82,12 +88,6 @@ export class DatosEntradaComponent implements OnInit {
       },
       error => console.error('Error al eliminar dato:', error)
     );
-  }
-
-  //Cancelar edición
-  cancelarEdicion(): void {
-    this.editandoClave = null;
-    this.editandoValor = '';
   }
 
   //Convertir objeto en lista de claves para `*ngFor`

@@ -4,7 +4,7 @@ import { Repository } from 'typeorm';
 import { CadenaColeccionDeDatos } from './entities/cadena-coleccion-de-datos.entity';
 import { ColeccionDeDatosCadena } from './entities/coleccion-de-datos-cadena.entity';
 import { ColeccionCadena } from './entities/coleccion-cadena.entity';
-import { readFileSync, writeFileSync, existsSync, unlinkSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
 @Injectable()
