@@ -3,15 +3,13 @@
     "id": 2,
     "Coleccion_Cadena": "WS SERVIDOR",
     "Parametro_Cadena": "SOA PRODUCCION",
-    "Valor_Desarrollo": "135.232.42.208:8080/chi/23/",
-    "editando": true
+    "Valor_Desarrollo": "135.232.42.208:8080/chi/23/"
   },
   {
     "id": 3,
     "Coleccion_Cadena": "WS SERVIDOR",
     "Parametro_Cadena": "SOA PRUEBAS",
-    "Valor_Desarrollo": "test",
-    "editando": true
+    "Valor_Desarrollo": "test"
   },
   {
     "id": 4,
